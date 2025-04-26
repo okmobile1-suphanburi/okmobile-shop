@@ -1,1 +1,86 @@
-<!DOCTYPE html><html><head><title>OK Mobile</title><link rel="stylesheet" href="style.css"></head><body><div class="splash">OK Mobile Loading...</div><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OK Mobile</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #fff;
+        }
+
+        .splash {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 2em;
+            animation: fadeout 2s forwards 3s;
+        }
+
+        .login {
+            display: none;
+            padding: 20px;
+            max-width: 400px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .login input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .login button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login button:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes fadeout {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div class="splash">OK Mobile Loading...</div>
+
+    <!-- Login Form -->
+    <div class="login">
+        <h2>Login</h2>
+        <form action="#">
+            <input type="text" placeholder="Username" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // Hide splash screen and show login form after 4 seconds
+        setTimeout(() => {
+            document.querySelector(".splash").style.display = "none";
+            document.querySelector(".login").style.display = "block";
+        }, 4000);
+    </script>
+</body>
+</html>

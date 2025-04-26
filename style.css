@@ -1,1 +1,0 @@
-body { margin:0; font-family:sans-serif; background:#fff; } .splash { display:flex; justify-content:center; align-items:center; height:100vh; font-size:2em; animation: fadeout 2s forwards 3s; } @keyframes fadeout { to { opacity:0; visibility:hidden; } }
